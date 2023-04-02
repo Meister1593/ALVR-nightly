@@ -2,6 +2,8 @@ name: Release nightly
 
 env:
   CARGO_TERM_COLOR: always
+on:
+  
 
 jobs:
   prepare_release:
