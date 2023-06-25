@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: "nowrep/ALVR"
-          ref: "linux-fsr"
+          repository: "alvr-org/ALVR"
+          ref: "master"
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
