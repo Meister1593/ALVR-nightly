@@ -70,6 +70,10 @@ jobs:
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
+          args: install wixtoolset --version=3.11.2
+          
+      - uses: crazy-max/ghaction-chocolatey@v1
+        with:
           args: install zip --version=3.0
 
       - uses: crazy-max/ghaction-chocolatey@v1
@@ -79,10 +83,6 @@ jobs:
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
           args: install pkgconfiglite --version=0.28
-
-      - uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install wixtoolset --version=3.11.2 --allow-downgrade
 
       - name: Build and package ALVR
         id: build
@@ -188,11 +188,11 @@ jobs:
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: install zip --version=3.0
+          args: install wixtoolset --version=3.11.2
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: install wixtoolset --version=3.11.2 --allow-downgrade
+          args: install zip --version=3.0
 
       - name: Build and package ALVR
         env:
