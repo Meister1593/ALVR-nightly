@@ -24,7 +24,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-pc-windows-msvc"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc"
 
       - name: Generate tag, set release ref
         id: gen_tag
