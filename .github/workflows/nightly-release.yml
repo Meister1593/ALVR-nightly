@@ -24,7 +24,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc
 
       - name: Generate tag, set release ref
         id: gen_tag
@@ -70,7 +70,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-pc-windows-msvc"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
@@ -130,7 +130,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-pc-windows-msvc"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
@@ -170,7 +170,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-pc-windows-msvc"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-pc-windows-msvc
 
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
@@ -205,7 +205,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-unknown-linux-gnu"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-unknown-linux-gnu
 
       - name: Build and install dependencies
         env:
@@ -245,7 +245,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-unknown-linux-gnu"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-unknown-linux-gnu
 
       - name: Build and install dependencies
         env:
@@ -286,7 +286,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-x86_64-unknown-linux-gnu"
+          rustup toolchain install ${{ env.RUST_VERSION }}-x86_64-unknown-linux-gnu
 
       - name: Install dependencies
         env:
@@ -357,7 +357,7 @@ jobs:
       - name: Setup rust toolchain
         run: |
           rustup set auto-self-update disable
-          rustup toolchain install "$RUST_VERSION-aarch64-linux-android"
+          rustup toolchain install ${{ env.RUST_VERSION }}-aarch64-linux-android
 
       - uses: actions/setup-java@v2
         with:
