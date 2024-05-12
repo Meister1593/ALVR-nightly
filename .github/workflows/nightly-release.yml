@@ -361,21 +361,21 @@ jobs:
           repository: "alvr-org/ALVR"
           ref: ${{ needs.prepare_release.outputs.release_ref }}
           
-      - name: Setup rust toolchain
-        run: |
-          rustup set auto-self-update disable
-          cargo install cargo-ndk
-          rustup target add aarch64-linux-android
-          rustup toolchain install ${{ env.RUST_VERSION }}-aarch64-linux-android
-          rustup default ${{ env.RUST_VERSION }}-aarch64-linux-android
-
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: aarch64-linux-android
+          override: trueh64-linux-android
+          
       - uses: actions/setup-java@v2
         with:
           distribution: "temurin"
           java-version: "17"
+          
       - uses: android-actions/setup-android@v3
         with:
           packages: "platforms;android-29"
+          
       - uses: nttld/setup-ndk@v1
         id: setup-ndk
         with:
