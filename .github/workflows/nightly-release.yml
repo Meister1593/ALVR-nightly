@@ -399,7 +399,7 @@ jobs:
         build_linux_streamer_debug,
         build_linux_launcher,
         build_flatpak_bundle,
-        build_android_client,
+        # build_android_client,
       ]
     steps:
       - uses: eregon/publish-release@v1
